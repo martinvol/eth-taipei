@@ -10,6 +10,12 @@ Cruvegrid BaaS indexes the user's cross-chain swap history without requiring cus
 
 Embedded wallets make the experience seamless—no private keys to manage or lose. The frontend is built with Next.js, TypeScript, Tailwind, and Ethers.js. The live version is deployed on Vercel.
 
+### Indexin with CurveGrid MultiBaas
+
+As trades come in different chains, it was necesary to use a tool to index them. The REST API and indexer supported the chains that were used in the product and provided easy-to-use and to configure endpoints to get the data that we wanted to show to the user.
+
+For future upgrades of this project it could be interesthing to use CurveGrid's Cloud Wallets to make it easier onboard, and CurveGrid's Spreadsheet offering can be used to offer the user different tax-optimization scenarios, and offer them the oportunity to close a position if the user finds it beneficial.
+
 ## How to test it
 
 The [deployment in Vercel](https://eth-taipei-confetti.vercel.app/) is pre-loaded and funded with accounts to avoid having to log-in.
@@ -20,3 +26,12 @@ Trades are performed using 1inch Fusion+. Fusion+ executes a cross-chain [dutch 
 - Arbitrum: [0xdd640cFF4733C51eBc77E174259e4FFa18b4729C](https://arbiscan.io/address/0xdd640cFF4733C51eBc77E174259e4FFa18b4729C)
 - Optimism: [0xdd640cFF4733C51eBc77E174259e4FFa18b4729C](https://optimistic.etherscan.io/address/0xdd640cFF4733C51eBc77E174259e4FFa18b4729C)
 - Flow: 
+
+## Team
+
+The team formed during Eth Taipei, Ward and Price had not met before. The project was ideated the first day of the hackathon.
+
+* Ward Price ([@wardprice.dev](https://blueskydirectory.com/profiles/wardprice.dev))
+  * Web3 curious Web2 dev with a background in arts
+* Martín Volpe ([@martinvol](http://twitter.com/martinvol))
+  * Entrepreneur and blockchain engineering wizard
