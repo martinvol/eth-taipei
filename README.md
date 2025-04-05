@@ -10,7 +10,7 @@ Cruvegrid BaaS indexes the user's cross-chain swap history without requiring cus
 
 Embedded wallets make the experience seamless—no private keys to manage or lose. The frontend is built with Next.js, TypeScript, Tailwind, and Ethers.js. The live version is deployed on Vercel.
 
-### Indexin with CurveGrid MultiBaas
+### Indexing with CurveGrid MultiBaas
 
 As trades come in different chains, it was necesary to use a tool to index them. The REST API and indexer supported the chains that were used in the product and provided easy-to-use and to configure endpoints to get the data that we wanted to show to the user.
 
