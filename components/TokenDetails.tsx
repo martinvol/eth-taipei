@@ -2,17 +2,18 @@
 
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { ArrowUpRight, ArrowDownRight, ArrowLeft } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import { tokens } from '@/data/tokens';
 import { mockTransactions } from '@/data/mockData';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import PortfolioChart from './PortfolioChart';
 import TransactionCard from './TransactionCard';
+import { useMemo } from 'react';
 
 export default function TokenDetails({ id }: { id: string }) {
   const router = useRouter();
-  const token = tokens.find((t) => t.id === id);
+  const token = useMemo(() => tokens.find((t) => t.id === id), [id]);
 
   if (!token) return <div>Token not found</div>;
 

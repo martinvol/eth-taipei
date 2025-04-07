@@ -1,5 +1,5 @@
 import { tokens } from '@/data/tokens';
-import { BuyTokenForm } from './BuyTokenForm';
+import { BuyTokenForm } from '@/components/BuyTokenForm';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
@@ -16,8 +16,10 @@ export function generateStaticParams() {
   }));
 }
 
-export default function BuyTokenPage({ params }: PageProps) {
-  const token = tokens.find((t) => t.id === params.tokenId);
+export default async function BuyTokenPage({ params }: PageProps) {
+  // Handle the entire params object asynchronously
+  const resolvedParams = await Promise.resolve(params);
+  const token = tokens.find((t) => t.id === resolvedParams.tokenId);
 
   if (!token) {
     return (
